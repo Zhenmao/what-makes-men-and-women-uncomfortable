@@ -1,0 +1,129 @@
+:root {
+  --color-bg: #283964;
+  --color-text: #e4e9e7;
+  --color-track: #8692b2;
+  --color-men: #18b1b7;
+  --color-women: #e53e24;
+  --color-tick: #e4e9e7;
+
+  --font-size-xl: 1.953rem;
+  --font-size-lg: 1.25rem;
+  --font-size-md: 1rem;
+  --font-size-sm: 0.8rem;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+main,
+footer {
+  width: min(100% - 3rem, 60rem);
+  margin: 3rem auto;
+}
+
+main > * + * {
+  margin-top: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: var(--font-size-xl);
+  line-height: 1.2;
+}
+
+a {
+  color: currentColor;
+}
+
+.clamped-bar-chart .men {
+  --key-color: var(--color-men);
+}
+
+.clamped-bar-chart .women {
+  --key-color: var(--color-women);
+}
+
+.clamped-bar-chart .group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.clamped-bar-chart .group > :first-child {
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+
+.clamped-bar-chart .group > :last-child {
+  flex-basis: 0;
+  flex-grow: 9999;
+  min-inline-size: 50%;
+}
+
+.clamped-bar-chart .group + .group {
+  margin-top: 3rem;
+}
+
+.clamped-bar-chart .group-title {
+  font-size: var(--font-size-lg);
+}
+
+.clamped-bar-chart .track-line {
+  stroke-linecap: round;
+  stroke: var(--color-track);
+}
+
+.clamped-bar-chart .fill-line {
+  stroke-linecap: round;
+  stroke: var(--key-color);
+}
+
+.clamped-bar-chart .tick-text {
+  fill: var(--color-tick);
+  font-size: var(--font-size-sm);
+}
+
+.clamped-bar-chart .chart {
+  margin-top: 40px;
+  position: relative;
+}
+
+.clamped-bar-chart .tooltip {
+  --arrow-size: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  isolation: isolate;
+}
+
+.clamped-bar-chart .tooltip-body {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--key-color);
+  color: var(--color-tick);
+  font-size: var(--font-size-md);
+  border-radius: inherit;
+}
+
+.clamped-bar-chart .tooltip-arrow {
+  position: absolute;
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  left: calc(var(--arrow-size) * -1);
+  top: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: var(--key-color);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}

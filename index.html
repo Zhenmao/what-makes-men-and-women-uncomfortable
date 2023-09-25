@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What makes men and women uncomfortable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1
+        >What makes <span style="color: var(--color-men)">men</span> and
+        <span style="color: var(--color-women)">women</span> uncomfortable?</h1
+      >
+      <div>
+        <p>% saying they would feel uncomfortable doing the following</p>
+        <div id="chart"></div>
+        <p
+          >when specified above, questions to men asked about male
+          friends/relatives and questions to women asked about female
+          friends/relatives - for brevity in the labels we have replaced with
+          [same gender]</p
+        >
+      </div>
+    </main>
+    <footer>
+      <ul>
+        <li
+          >Data source: YouGov
+          <a
+            href="https://yougov.co.uk/society/articles/46046-what-makes-men-uncomfortable"
+            target="_blank"
+          >
+            What makes men uncomfortable?
+          </a>
+          18-24 August 2023</li
+        >
+        <li>
+          Inspired by:
+          <a
+            href="https://www.oecdregionalwellbeing.org/US36.html"
+            target="_blank"
+            >OECD regional well-being</a
+          >
+        </li>
+      </ul>
+    </footer>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/clamped-bar-chart.js"></script>
+  </body>
+</html>
